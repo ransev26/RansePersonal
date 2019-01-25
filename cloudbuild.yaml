@@ -1,0 +1,19 @@
+steps:
+- name: ubuntu
+  args: ['bash', '-c', "echo '$COMMIT_SHA' > REVISION.txt"]
+- name: gcr.io/cloud-builders/gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'dags'
+    - 'gs://us-central1-falabella-compo-a4de272f-bucket/dags'
+- name: gcr.io/cloud-builders/gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'plugins'
+    - 'gs://tes_continuous_integration_sync'
