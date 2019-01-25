@@ -7,5 +7,4 @@ steps:
     - 'rsync'
     - '-d'
     - '-r'
-    - 'dags'
     - 'gs://us-central1-falabella-compo-a4de272f-bucket/dags'
