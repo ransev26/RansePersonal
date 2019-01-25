@@ -1,7 +1,7 @@
 steps:
 - name: ubuntu
   args: ['bash', '-c', "echo '$COMMIT_SHA' > REVISION.txt"]
-- name: gcr.io/cloud-builders/gsutil
+- name: gcr.io/cloud-builders-ranse/gsutil
   args:
     - '-m'
     - 'rsync'
