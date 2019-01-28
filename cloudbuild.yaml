@@ -1,2 +1,0 @@
-- name: gcr.io/cloud-builders/gsutil
- args: [‘rsync’, ‘-d’, ‘-r’, ‘.’, ‘gs://${_BUCKET}/dags’]
