@@ -1,0 +1,10 @@
+steps:
+- name: gcr.io/falabella-lista-productos-web/gsutil
+  args:
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'dags'
+    - 'gs://${_GCS_BUCKET}/dags'
+
+
