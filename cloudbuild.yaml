@@ -1,0 +1,11 @@
+steps:
+- name: gsutil
+  args:
+    - '-m'
+    - 'rsync'
+    - '-d'
+    - '-r'
+    - 'dags'
+    - 'gs://${_GCS_BUCKET}/dags'
+
+
